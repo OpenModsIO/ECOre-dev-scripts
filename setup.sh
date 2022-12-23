@@ -4,7 +4,7 @@
 export $(cat .env | xargs) 
 
 # add to .gitignore if none initiated
-[ -f ".gitignore" ] && touch .gitignore && echo "build" >> .gitignore
+[ -f '.gitignore' ] && touch .gitignore && echo "build" >> .gitignore
 
 ECO_BUILD_DIR="./build/$ECO_BUILD_TARGET"
 ECO_DOWNLOAD="EcoModKit_$ECO_BUILD_TARGET"
