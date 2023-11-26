@@ -1,46 +1,41 @@
-﻿# ECOre Dev Scripts
+# ECOre Dev Scripts
+
 ## Overview
 
-This repository provides some scripts to set up local development environments, deploy servers, package mods and more.
+The ECOre Dev Scripts repository offers tools for setting up development environments for Eco, a game by Strange Loop Games. These scripts simplify downloading server files, establishing development setups, and packaging mods.
 
-## Current scripts:
+## Usage
 
-### setup.sh
+### For Linux/MacOS
+Use `setup.sh` script:
+`./setup-linux.sh`
 
-Run this with a version of Eco as the argument to download a copy of the server and reference DLLs. For example:
+### For Windows
+Use `setup.ps1` script in PowerShell:
+`.\setup-win.ps1`
 
-**Linux/MacOS:**
-```bash
-./setup.sh 9.7.6
-```
+### Features
+- Automated downloading of Eco server files and reference DLLs.
+- Option to choose between release and staging versions of Eco.
+- Command-line arguments:
+  - `--no-confirm`: Skip confirmation prompts, using default choices.
+  - `--staging`: Directly choose the staging version of Eco.
 
-**Windows:**
+### Planned
+- Server and Client download
+- Existing directory update, repair, remove
+- ECOre mod download/population
 
-**!!This is borked and still not working, would appreciate any update/help to the below:**
-1. Upon running the below command in PowerShell, you'll be prompted to visit a Microsoft Store page to download a Linux OS for WSL. Follow the link and download Alpine Linux, and when done, click Open in the Windows Store to finish install.
-```bash
-bash setup.sh 9.7.6
-```
-2. You will be dropped into a "Linux" shell after entering a UNIX Username and password. Navigate to this directory using these commands:
-```bash
-# this shows what directory you're currently in
-pwd
-# this 'changes directory'
-cd (some directory)
-# this shows what is inside the directory you're in
-ls
-```
-Note that because WSL creates a separate 'install', you need to get to your C:/ drive (or similar) a different way. To get to your Windows C:/ drive:
-```bash
-cd /mnt/c
-```
-You can append additional directories to that, eg `/mnt/c/Users/YourAcc/Documents` which is the equivalent of C:/Users/YourAcc/Documents, aka your Documents folder.
-3. Once you are in the correct directory (ECOre-dev-scripts), run these commands to install 'bash' and re-run the setup, like so:
-```bash
-# log in as a super user, it'll ask for a password
-su
-# install bash
-apk add bash
-# run the setup
-bash setup.sh 9.7.6
-```
+### Notes for Windows
+- Tested on Windows 11
+- Ensure PowerShell execution policy allows script execution (`Get-ExecutionPolicy` and `Set-ExecutionPolicy`).
+
+## Getting Started
+
+1. Clone the repository.
+2. Choose and run the appropriate script based on your OS.
+3. Follow the prompts to complete the setup for the desired Eco version.
+
+## Contributing
+
+We welcome contributions! Feel free to suggest improvements or report issues via issues or pull requests.

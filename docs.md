@@ -1,45 +1,57 @@
-﻿# How to work on eCore mods
-## What is Git??
+# How to Work on eCore Mods
 
-Git is a thing which tracks changes to files. Imagine this file, notes.txt. It contains:
-`Hi there!`
+## Introduction to Git
 
-If we change it to
-`Hi here!`
+Git is a version control system that tracks changes in files. It's like keeping a history of what's changed in your project, so you can:
 
-What's the difference? On line 1, four characters over, we deleted the letter t. That's what Git does - tracks code changes - so we can:
-1. See what has changed when a team work on something
-2. Go back to older changes if we break something
-3. Work together.
+1. Track changes when collaborating.
+2. Revert to previous versions if needed.
+3. Merge changes seamlessly.
 
-On point three, imagine you removed the letter t, and I removed the first letter H. We both have these files, how do we merge the work we've done? Without Git, we have to copy/paste our changes. With Git, it remembers these two things:
-- You removed the letter 't' from the fourth position on line 1
-- I removed the letter 'H' from the first position on line 1
-
-So to merge both of our changes, it simply applies those two changes to the one file, producing:
-`i here!`
+For example, if two people edit a file, one removing the letter 't' and the other removing the letter 'H' from "Hi there!", Git can combine these changes to make "i here!".
 
 ## What is GitHub?
-GitHub is a place to store the files we work on, as well as the change history.
 
+GitHub is an online platform for storing your Git repositories. It stores your files and their change history, making collaboration easier.
 
-## Alright how do I get started?
-1. Download Github Desktop: https://desktop.github.com/
-2. After logging in, go to File -> Clone Repository. Select the repository you want to copy/clone, and put it somewhere easy to find for you. I put mine in a folder in Documents, eg Documents/Eco
-3. Download Sublime Text: https://www.sublimetext.com/ - This is a code editing tool, it's better than notepad because notepad adds random characters to your code, and, Sublime Text helps colour your code to make it more readable.
-4. Open Sublime Text, and drag the whole folder you just "cloned" into it.
-5. After you make a change to the code, open GitHub Desktop. Each change you've made will appear here. Review them - make sure they're right! You can either highlight all the changes (Shift+click) or one at a time, and in the bottom-left, describe the changes for future readers to understand. Click Commit to main!
-6. Almost done - at the top, you'll see Push Origin. Click it, and this will upload your changes. Now visit github.com and you'll see your changes there!
+## Getting Started with GitHub
 
-In the real world, you'll want to make a "branch" rather than "pushing to main". This lets others check what you did before we let the code in. To do this:
-1. In GitHub Desktop, at the top click Current Branch then click New Branch
-2. Give the new branch a name related to the changes you're making
-3. That's it - follow the above process of Commit to {your branch name} in the bottom-left, then Pushing your code up (button at the top)
+1. **Set Up GitHub Desktop:**
+   - Download from [GitHub Desktop](https://desktop.github.com/).
+   - Log in and clone the repository you want to work on (File -> Clone Repository).
 
-## How do I test mods I work on?
+2. **Choose a Code Editor:**
+   - Download [Visual Studio 2022 (Community Edition)](https://visualstudio.microsoft.com/vs/community/). This integrated development environment (IDE) is more than just a code editor; it offers advanced tools for debugging, version control, and project management, making it ideal for larger projects.
+   - Be sure not to confuse it with Visual Studio Code. Visual Studio 2022 is a full-fledged IDE designed for complex software development, offering robust tools and features. Visual Studio Code, on the other hand, is a lightweight but powerful code editor that's great for simpler projects and supports a wide range of programming languages. For Eco mod development, the comprehensive tools available in Visual Studio 2022 are more suitable.
 
-1. Download an Eco Server from https://play.eco
-2. Unzip it somewhere. Go to the Mods folder, open UserCode folder
-3. Copy the mod you've been working on, and paste it in the UserCode folder
-4. Did the server launch? Success! Connect to it. If it didn't launch, go read the Logs folder in your Eco server. Make sure you're reading the newest log! It will tell you which file failed, and what line number, which gives you a clue.
+3. **Open Your Project:**
+   - Open Sublime Text and drag the cloned folder into it.
 
+4. **Make and Commit Changes:**
+   - After editing, open GitHub Desktop. Review your changes.
+   - Commit your changes by describing what you did, then click "Commit to main".
+
+5. **Push Your Changes:**
+   - Click "Push Origin" to upload your changes to GitHub.
+
+### Working with Branches
+
+Instead of committing directly to the main branch, it's better to create a new branch for your changes:
+
+1. Create a New Branch in GitHub Desktop (Current Branch -> New Branch).
+2. Name it related to the changes you're making.
+3. Commit and push as usual, but to your new branch.
+
+## Testing Your Mods
+
+1. **Download Eco Server:**
+   - Get it from [Eco Server](https://play.eco).
+
+2. **Prepare for Testing:**
+   - Unzip the server and navigate to the Mods/UserCode folder.
+   - Copy your mod into this folder.
+
+3. **Launch and Test:**
+   - Start the server and connect. If it fails, check the Logs folder for clues on what went wrong.
+
+Remember, the Logs will indicate which file and line caused an issue, helping you debug more efficiently.
